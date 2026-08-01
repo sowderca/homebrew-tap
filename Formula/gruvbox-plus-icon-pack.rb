@@ -10,7 +10,7 @@ class GruvboxPlusIconPack < Formula
   def install
     (share/"icons").install "Gruvbox-Plus-Dark", "Gruvbox-Plus-Light"
     pkgshare.install "folders"
-    bin.install "scripts/folders-color-chooser.sh" => "gruvbox-plus-folders-color-chooser"
+    bin.install "scripts/folders-color-chooser" => "gruvbox-plus-folders-color-chooser"
   end
 
   def caveats

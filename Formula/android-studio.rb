@@ -10,7 +10,7 @@ class AndroidStudio < Formula
   depends_on "openjdk"
 
   def install
-    libexec.install Dir["android-studio/*"]
+    libexec.install Dir["*"]
     (bin/"studio").write <<~SH
       #!/bin/bash
       exec "#{libexec}/bin/studio" "$@"
