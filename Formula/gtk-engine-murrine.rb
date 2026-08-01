@@ -7,10 +7,14 @@ class GtkEngineMurrine < Formula
 
   depends_on :linux
   depends_on "gtk+"
+  depends_on "gettext" => :build
   depends_on "intltool" => :build
+  depends_on "perl" => :build
+  depends_on "perl-xml-parser" => :build
   depends_on "pkg-config" => :build
 
   def install
+    ENV["PERL"] = Formula["perl"].bin/"perl"
     system "./configure",
            "--prefix=#{prefix}",
            "--enable-animation",
